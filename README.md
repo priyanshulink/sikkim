@@ -1,45 +1,105 @@
-# Have-In-Sikkim Heritage Portal
+# Monastery Preservation Project
 
-A web platform to explore, preserve, and celebrate the rich heritage of Sikkim's monasteries. Experience virtual tours, community stories, and AI-powered insights—all in one place.
+A comprehensive digital heritage platform for Sikkim's monasteries, combining a public-facing web portal with advanced AI-powered preservation tools.
 
-## 🌐 Live Demo
+This repository contains two main applications:
 
-**Access the prototype:** [https://rahulat865.github.io/Monastery-Prototype/](https://rahulat865.github.io/Monastery-Prototype/)
+1. **[Have-In-Sikkim Portal (mern-app)](./mern-app)**: A full-stack MERN application for virtual tours, events, and community stories.
+2. **[Preservation System (Monastery-Preservation)](./Monastery-Preservation)**: An AI-driven image comparison system for structural health monitoring.
 
-## 📋 Features
+---
 
-- **Interactive Map:** View and learn about Sikkim's monasteries with an embedded Google Map and detailed info.
-- **Virtual Tours:** Embark on immersive journeys through monastery sites.
-- **Travel Itinerary Planner:** Plan your monastery tour with customizable day options, nearest towns, and key experiences.
-- **Community Content:** Read experiences, view photos, and watch videos shared by visitors.
-- **Upcoming Events:** Stay updated with monastery events and festivals.
-- **AI Chatbot:** Ask questions or upload images for instant heritage insights, powered by Google Gemini AI.
-- **User Authentication:** Secure login for sharing experiences (Firebase Auth).
-- **Admin Dashboard:** Moderate content and manage events (for admins).
-- **Responsive Design:** Mobile-friendly and accessible UI.
+## 📂 Project Structure
 
-
-## 🛠️ Tech Stack
-
-- **Frontend:** HTML, CSS, JavaScript
-- **Backend & Database:** Firebase Authentication & Firestore
-- **AI Integration:** Google Gemini API
-- **Maps:** Google Maps JavaScript API
-- **Deployment:** GitHub Pages
-
-
-
-Project Structure
-
-Prototype - Copy/
+```
+Monastery-Prototype-main/
+├── mern-app/                 # Main User Portal (MERN Stack)
+│   ├── client/               # React Frontend
+│   └── server/               # Node.js Backend
 │
-├── index.html           # Main landing page
-├── style.css            # Stylesheet
-├── script.js            # Main JS logic
-├── events.js            # Events fetching & rendering
-├── /img                 # Images (monasteries, UI)
-├── /video               # Background and tour videos
-├── /monasteries.html    # Monastery details page
-├── /login.html          # User login page
-└── ...                  # Other assets and pages
+└── Monastery-Preservation/   # Technical Preservation System
+    ├── frontend/             # React Evaluation UI
+    ├── backend/              # Node.js API
+    └── python-service/       # AI/OpenCV Analysis Engine
+```
 
+---
+
+## 🌟 Application Overviews
+
+### 1. Have-In-Sikkim Portal (`mern-app`)
+
+The primary interface for tourists, pilgrims, and researchers.
+
+- **key Features:**
+  - 🏰 **Virtual Tours:** 360° immersive experiences of monasteries.
+  - 📅 **Events Calendar:** Track festivals and ceremonies.
+  - 🤖 **AI Chatbot:** Gemini-powered assistant for heritage queries.
+  - 🎒 **Itinerary Planner:** Custom travel planning tools.
+  - 👥 **Community:** Share stories, photos, and videos.
+
+[👉 View Full Documentation](./mern-app/README.md)
+
+### 2. Preservation System (`Monastery-Preservation`)
+
+A specialized tool for conservators and authorities to monitor physical changes in monastery structures.
+
+- **Key Features:**
+  - 🔍 **AI Structural Analysis:** Detects cracks and changes using OpenCV & SSIM.
+  - 📊 **Difference Visualization:** Heatmaps and annotated comparison images.
+  - �️ **Secure Storage:** Private artifact documentation in MongoDB GridFS.
+  - 📑 **Report Generation:** Automated assessment reports.
+
+[👉 View Full Documentation](./Monastery-Preservation/README.md)
+
+---
+
+## 🚀 Quick Start Guide
+
+### Prerequisites
+- Node.js (v18+)
+- MongoDB (v5.0+)
+- Python (v3.8+) (for Preservation System)
+
+### Running the User Portal (`mern-app`)
+
+```bash
+# Terminal 1: Backend
+cd mern-app/server
+npm install
+npm run dev
+
+# Terminal 2: Frontend
+cd mern-app/client
+npm install
+npm run dev
+```
+
+### Running the Preservation System (`Monastery-Preservation`)
+
+```bash
+# Terminal 1: Backend
+cd Monastery-Preservation/backend
+npm install
+npm run dev
+
+# Terminal 2: Python Engine
+cd Monastery-Preservation/python-service
+pip install -r requirements.txt
+python app.py
+
+# Terminal 3: Frontend
+cd Monastery-Preservation/frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions to help preserve Sikkim's rich heritage! Please check the individual directories for specific contribution guidelines.
+
+## 📄 License
+
+This project is licensed under the MIT License.
